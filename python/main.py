@@ -174,11 +174,13 @@ def show_results():
     if percentage == 100:
         message = "Parfait, tu maîtrises toute cette série !"
     elif percentage >= 70:
-        message = "Très bon travail, encore un petit effort !"
+        message = "Très bon travail, mais pas parfait !"
     elif percentage >= 40:
-        message = "Tu progresses. Une nouvelle révision t'aidera !"
+        message = "Tu progresses. !"
+    elif percentage > 0:
+        message = "Tu ne connais presque rien !"
     else:
-        message = "Continue à t'entraîner, ça va rentrer !"
+        message = "Tu est nul !"
     document["score-message"].text = message
 
     results_list = document["results-list"]
