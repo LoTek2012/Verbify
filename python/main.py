@@ -190,10 +190,12 @@ def show_results():
     document["mastered-count"].text = str(mastered)
     document["reviewed-count"].text = str(total)
     document["score-percentage"].text = "{}%".format(percentage)
-    document["score-ring"].style.background = (
+    score_ring = document["score-ring"]
+    score_ring.style.setProperty("--score", "{}%".format(percentage))
+    score_ring.style.background = (
         "conic-gradient(#9fc66c {}%, #e9eee2 {}%)".format(percentage, percentage)
     )
-    document["score-ring"].setAttribute("aria-label", "Score de {} %".format(percentage))
+    score_ring.setAttribute("aria-label", "Score de {} %".format(percentage))
     document["results-range"].text = "{} → {}".format(
         selected_verbs[0]["name"],
         selected_verbs[-1]["name"],
@@ -358,6 +360,20 @@ def return_to_setup(event):
     document["start-verb"].focus()
 
 
+def toggle_theme(event):
+    event.preventDefault()
+    root = document.documentElement
+    dark_enabled = root.getAttribute("data-theme") != "dark"
+    theme = "dark" if dark_enabled else "light"
+    next_action = "Activer le thème clair" if dark_enabled else "Activer le thème sombre"
+
+    root.setAttribute("data-theme", theme)
+    document["theme-toggle"].setAttribute("aria-pressed", str(dark_enabled).lower())
+    document["theme-toggle"].setAttribute("aria-label", next_action)
+    document["theme-toggle"].title = next_action
+    document["theme-color"].content = "#101713" if dark_enabled else "#f5f6f1"
+
+
 def update_known_mode(*_args):
     is_random = document["known-mode"].value == "random"
     known_form_group = document["known-form-group"]
@@ -446,5 +462,6 @@ document["skip-question"].bind("click", skip_question)
 document["next-question"].bind("click", next_question)
 document["back-to-setup"].bind("click", return_to_setup)
 document["retry-quiz"].bind("click", return_to_setup)
+document["theme-toggle"].bind("click", toggle_theme)
 
 ajax.get("data/verbs_list.json", mode="json", oncomplete=on_verbs_loaded)
