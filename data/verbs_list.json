@@ -1,0 +1,1714 @@
+{
+    "be": {
+        "index": "1",
+        "conjugations": {
+            "BV": [
+                "be"
+            ],
+            "V-ED": [
+                "was",
+                "were"
+            ],
+            "V-EN": [
+                "been"
+            ],
+            "translation": [
+                "être"
+            ]
+        }
+    },
+    "beat": {
+        "index": "2",
+        "conjugations": {
+            "BV": [
+                "beat"
+            ],
+            "V-ED": [
+                "beat"
+            ],
+            "V-EN": [
+                "beaten"
+            ],
+            "translation": [
+                "battre"
+            ]
+        }
+    },
+    "become": {
+        "index": "3",
+        "conjugations": {
+            "BV": [
+                "become"
+            ],
+            "V-ED": [
+                "became"
+            ],
+            "V-EN": [
+                "become"
+            ],
+            "translation": [
+                "devenir"
+            ]
+        }
+    },
+    "begin": {
+        "index": "4",
+        "conjugations": {
+            "BV": [
+                "begin"
+            ],
+            "V-ED": [
+                "began"
+            ],
+            "V-EN": [
+                "begun"
+            ],
+            "translation": [
+                "commencer"
+            ]
+        }
+    },
+    "bet": {
+        "index": "5",
+        "conjugations": {
+            "BV": [
+                "bet"
+            ],
+            "V-ED": [
+                "bet"
+            ],
+            "V-EN": [
+                "bet"
+            ],
+            "translation": [
+                "parier"
+            ]
+        }
+    },
+    "bind": {
+        "index": "6",
+        "conjugations": {
+            "BV": [
+                "bind"
+            ],
+            "V-ED": [
+                "bound"
+            ],
+            "V-EN": [
+                "bound"
+            ],
+            "translation": [
+                "lier",
+                "relier"
+            ]
+        }
+    },
+    "bite": {
+        "index": "7",
+        "conjugations": {
+            "BV": [
+                "bite"
+            ],
+            "V-ED": [
+                "bit"
+            ],
+            "V-EN": [
+                "bitten"
+            ],
+            "translation": [
+                "mordre"
+            ]
+        }
+    },
+    "bleed": {
+        "index": "8",
+        "conjugations": {
+            "BV": [
+                "bleed"
+            ],
+            "V-ED": [
+                "bled"
+            ],
+            "V-EN": [
+                "bled"
+            ],
+            "translation": [
+                "saigner"
+            ]
+        }
+    },
+    "blow": {
+        "index": "9",
+        "conjugations": {
+            "BV": [
+                "blow"
+            ],
+            "V-ED": [
+                "blew"
+            ],
+            "V-EN": [
+                "blown"
+            ],
+            "translation": [
+                "souffler"
+            ]
+        }
+    },
+    "break": {
+        "index": "10",
+        "conjugations": {
+            "BV": [
+                "break"
+            ],
+            "V-ED": [
+                "broke"
+            ],
+            "V-EN": [
+                "broken"
+            ],
+            "translation": [
+                "casser"
+            ]
+        }
+    },
+    "bring": {
+        "index": "11",
+        "conjugations": {
+            "BV": [
+                "bring"
+            ],
+            "V-ED": [
+                "brought"
+            ],
+            "V-EN": [
+                "brought"
+            ],
+            "translation": [
+                "apporter"
+            ]
+        }
+    },
+    "build": {
+        "index": "12",
+        "conjugations": {
+            "BV": [
+                "build"
+            ],
+            "V-ED": [
+                "built"
+            ],
+            "V-EN": [
+                "built"
+            ],
+            "translation": [
+                "construire"
+            ]
+        }
+    },
+    "burn": {
+        "index": "13",
+        "conjugations": {
+            "BV": [
+                "burn"
+            ],
+            "V-ED": [
+                "burnt"
+            ],
+            "V-EN": [
+                "burnt"
+            ],
+            "translation": [
+                "brûler"
+            ]
+        }
+    },
+    "burst": {
+        "index": "14",
+        "conjugations": {
+            "BV": [
+                "burst"
+            ],
+            "V-ED": [
+                "burst"
+            ],
+            "V-EN": [
+                "burst"
+            ],
+            "translation": [
+                "éclater"
+            ]
+        }
+    },
+    "buy": {
+        "index": "15",
+        "conjugations": {
+            "BV": [
+                "buy"
+            ],
+            "V-ED": [
+                "bought"
+            ],
+            "V-EN": [
+                "bought"
+            ],
+            "translation": [
+                "acheter"
+            ]
+        }
+    },
+    "catch": {
+        "index": "16",
+        "conjugations": {
+            "BV": [
+                "catch"
+            ],
+            "V-ED": [
+                "caught"
+            ],
+            "V-EN": [
+                "caught"
+            ],
+            "translation": [
+                "attraper"
+            ]
+        }
+    },
+    "choose": {
+        "index": "17",
+        "conjugations": {
+            "BV": [
+                "choose"
+            ],
+            "V-ED": [
+                "chose"
+            ],
+            "V-EN": [
+                "chosen"
+            ],
+            "translation": [
+                "choisir"
+            ]
+        }
+    },
+    "come": {
+        "index": "18",
+        "conjugations": {
+            "BV": [
+                "come"
+            ],
+            "V-ED": [
+                "came"
+            ],
+            "V-EN": [
+                "come"
+            ],
+            "translation": [
+                "venir"
+            ]
+        }
+    },
+    "cost": {
+        "index": "19",
+        "conjugations": {
+            "BV": [
+                "cost"
+            ],
+            "V-ED": [
+                "cost"
+            ],
+            "V-EN": [
+                "cost"
+            ],
+            "translation": [
+                "coûter"
+            ]
+        }
+    },
+    "cut": {
+        "index": "20",
+        "conjugations": {
+            "BV": [
+                "cut"
+            ],
+            "V-ED": [
+                "cut"
+            ],
+            "V-EN": [
+                "cut"
+            ],
+            "translation": [
+                "couper"
+            ]
+        }
+    },
+    "do": {
+        "index": "21",
+        "conjugations": {
+            "BV": [
+                "do"
+            ],
+            "V-ED": [
+                "did"
+            ],
+            "V-EN": [
+                "done"
+            ],
+            "translation": [
+                "faire"
+            ]
+        }
+    },
+    "draw": {
+        "index": "22",
+        "conjugations": {
+            "BV": [
+                "draw"
+            ],
+            "V-ED": [
+                "drew"
+            ],
+            "V-EN": [
+                "drawn"
+            ],
+            "translation": [
+                "dessiner"
+            ]
+        }
+    },
+    "dream": {
+        "index": "23",
+        "conjugations": {
+            "BV": [
+                "dream"
+            ],
+            "V-ED": [
+                "dreamt"
+            ],
+            "V-EN": [
+                "dreamt"
+            ],
+            "translation": [
+                "rêver"
+            ]
+        }
+    },
+    "drink": {
+        "index": "24",
+        "conjugations": {
+            "BV": [
+                "drink"
+            ],
+            "V-ED": [
+                "drank"
+            ],
+            "V-EN": [
+                "drunk"
+            ],
+            "translation": [
+                "boire"
+            ]
+        }
+    },
+    "drive": {
+        "index": "25",
+        "conjugations": {
+            "BV": [
+                "drive"
+            ],
+            "V-ED": [
+                "drove"
+            ],
+            "V-EN": [
+                "driven"
+            ],
+            "translation": [
+                "conduire"
+            ]
+        }
+    },
+    "eat": {
+        "index": "26",
+        "conjugations": {
+            "BV": [
+                "eat"
+            ],
+            "V-ED": [
+                "ate"
+            ],
+            "V-EN": [
+                "eaten"
+            ],
+            "translation": [
+                "manger"
+            ]
+        }
+    },
+    "fall": {
+        "index": "27",
+        "conjugations": {
+            "BV": [
+                "fall"
+            ],
+            "V-ED": [
+                "fell"
+            ],
+            "V-EN": [
+                "fallen"
+            ],
+            "translation": [
+                "tomber"
+            ]
+        }
+    },
+    "feed": {
+        "index": "28",
+        "conjugations": {
+            "BV": [
+                "feed"
+            ],
+            "V-ED": [
+                "fed"
+            ],
+            "V-EN": [
+                "fed"
+            ],
+            "translation": [
+                "nourrir"
+            ]
+        }
+    },
+    "feel": {
+        "index": "29",
+        "conjugations": {
+            "BV": [
+                "feel"
+            ],
+            "V-ED": [
+                "felt"
+            ],
+            "V-EN": [
+                "felt"
+            ],
+            "translation": [
+                "sentir",
+                "éprouver"
+            ]
+        }
+    },
+    "fight": {
+        "index": "30",
+        "conjugations": {
+            "BV": [
+                "fight"
+            ],
+            "V-ED": [
+                "fought"
+            ],
+            "V-EN": [
+                "fought"
+            ],
+            "translation": [
+                "combattre"
+            ]
+        }
+    },
+    "find": {
+        "index": "31",
+        "conjugations": {
+            "BV": [
+                "find"
+            ],
+            "V-ED": [
+                "found"
+            ],
+            "V-EN": [
+                "found"
+            ],
+            "translation": [
+                "trouver"
+            ]
+        }
+    },
+    "fly": {
+        "index": "32",
+        "conjugations": {
+            "BV": [
+                "fly"
+            ],
+            "V-ED": [
+                "flew"
+            ],
+            "V-EN": [
+                "flown"
+            ],
+            "translation": [
+                "voler"
+            ]
+        }
+    },
+    "forget": {
+        "index": "33",
+        "conjugations": {
+            "BV": [
+                "forget"
+            ],
+            "V-ED": [
+                "forgot"
+            ],
+            "V-EN": [
+                "forgotten"
+            ],
+            "translation": [
+                "oublier"
+            ]
+        }
+    },
+    "forgive": {
+        "index": "34",
+        "conjugations": {
+            "BV": [
+                "forgive"
+            ],
+            "V-ED": [
+                "forgave"
+            ],
+            "V-EN": [
+                "forgiven"
+            ],
+            "translation": [
+                "pardonner"
+            ]
+        }
+    },
+    "freeze": {
+        "index": "35",
+        "conjugations": {
+            "BV": [
+                "freeze"
+            ],
+            "V-ED": [
+                "froze"
+            ],
+            "V-EN": [
+                "frozen"
+            ],
+            "translation": [
+                "geler"
+            ]
+        }
+    },
+    "get": {
+        "index": "36",
+        "conjugations": {
+            "BV": [
+                "get"
+            ],
+            "V-ED": [
+                "got"
+            ],
+            "V-EN": [
+                "got"
+            ],
+            "translation": [
+                "obtenir"
+            ]
+        }
+    },
+    "give": {
+        "index": "37",
+        "conjugations": {
+            "BV": [
+                "give"
+            ],
+            "V-ED": [
+                "gave"
+            ],
+            "V-EN": [
+                "given"
+            ],
+            "translation": [
+                "donner"
+            ]
+        }
+    },
+    "go": {
+        "index": "38",
+        "conjugations": {
+            "BV": [
+                "go"
+            ],
+            "V-ED": [
+                "went"
+            ],
+            "V-EN": [
+                "gone"
+            ],
+            "translation": [
+                "aller"
+            ]
+        }
+    },
+    "grow": {
+        "index": "39",
+        "conjugations": {
+            "BV": [
+                "grow"
+            ],
+            "V-ED": [
+                "grew"
+            ],
+            "V-EN": [
+                "grown"
+            ],
+            "translation": [
+                "grandir"
+            ]
+        }
+    },
+    "hang": {
+        "index": "40",
+        "conjugations": {
+            "BV": [
+                "hang"
+            ],
+            "V-ED": [
+                "hung"
+            ],
+            "V-EN": [
+                "hung"
+            ],
+            "translation": [
+                "pendre",
+                "accrocher"
+            ]
+        }
+    },
+    "have": {
+        "index": "41",
+        "conjugations": {
+            "BV": [
+                "have"
+            ],
+            "V-ED": [
+                "had"
+            ],
+            "V-EN": [
+                "had"
+            ],
+            "translation": [
+                "avoir"
+            ]
+        }
+    },
+    "hear": {
+        "index": "42",
+        "conjugations": {
+            "BV": [
+                "hear"
+            ],
+            "V-ED": [
+                "heard"
+            ],
+            "V-EN": [
+                "heard"
+            ],
+            "translation": [
+                "entendre"
+            ]
+        }
+    },
+    "hide": {
+        "index": "43",
+        "conjugations": {
+            "BV": [
+                "hide"
+            ],
+            "V-ED": [
+                "hid"
+            ],
+            "V-EN": [
+                "hidden"
+            ],
+            "translation": [
+                "(se) cacher"
+            ]
+        }
+    },
+    "hit": {
+        "index": "44",
+        "conjugations": {
+            "BV": [
+                "hit"
+            ],
+            "V-ED": [
+                "hit"
+            ],
+            "V-EN": [
+                "hit"
+            ],
+            "translation": [
+                "frapper",
+                "atteindre"
+            ]
+        }
+    },
+    "hold": {
+        "index": "45",
+        "conjugations": {
+            "BV": [
+                "hold"
+            ],
+            "V-ED": [
+                "held"
+            ],
+            "V-EN": [
+                "held"
+            ],
+            "translation": [
+                "tenir"
+            ]
+        }
+    },
+    "hurt": {
+        "index": "46",
+        "conjugations": {
+            "BV": [
+                "hurt"
+            ],
+            "V-ED": [
+                "hurt"
+            ],
+            "V-EN": [
+                "hurt"
+            ],
+            "translation": [
+                "blesser"
+            ]
+        }
+    },
+    "keep": {
+        "index": "47",
+        "conjugations": {
+            "BV": [
+                "keep"
+            ],
+            "V-ED": [
+                "kept"
+            ],
+            "V-EN": [
+                "kept"
+            ],
+            "translation": [
+                "garder"
+            ]
+        }
+    },
+    "know": {
+        "index": "48",
+        "conjugations": {
+            "BV": [
+                "know"
+            ],
+            "V-ED": [
+                "knew"
+            ],
+            "V-EN": [
+                "known"
+            ],
+            "translation": [
+                "savoir",
+                "connaître"
+            ]
+        }
+    },
+    "lay": {
+        "index": "49",
+        "conjugations": {
+            "BV": [
+                "lay"
+            ],
+            "V-ED": [
+                "laid"
+            ],
+            "V-EN": [
+                "laid"
+            ],
+            "translation": [
+                "poser à plat"
+            ]
+        }
+    },
+    "learn": {
+        "index": "50",
+        "conjugations": {
+            "BV": [
+                "learn"
+            ],
+            "V-ED": [
+                "learnt"
+            ],
+            "V-EN": [
+                "learnt"
+            ],
+            "translation": [
+                "apprendre"
+            ]
+        }
+    },
+    "leave": {
+        "index": "51",
+        "conjugations": {
+            "BV": [
+                "leave"
+            ],
+            "V-ED": [
+                "left"
+            ],
+            "V-EN": [
+                "left"
+            ],
+            "translation": [
+                "laisser",
+                "quitter"
+            ]
+        }
+    },
+    "lend": {
+        "index": "52",
+        "conjugations": {
+            "BV": [
+                "lend"
+            ],
+            "V-ED": [
+                "lent"
+            ],
+            "V-EN": [
+                "lent"
+            ],
+            "translation": [
+                "prêter"
+            ]
+        }
+    },
+    "let": {
+        "index": "53",
+        "conjugations": {
+            "BV": [
+                "let"
+            ],
+            "V-ED": [
+                "let"
+            ],
+            "V-EN": [
+                "let"
+            ],
+            "translation": [
+                "permettre",
+                "louer"
+            ]
+        }
+    },
+    "lie": {
+        "index": "54",
+        "conjugations": {
+            "BV": [
+                "lie"
+            ],
+            "V-ED": [
+                "lay"
+            ],
+            "V-EN": [
+                "lain"
+            ],
+            "translation": [
+                "être étendu"
+            ]
+        }
+    },
+    "lose": {
+        "index": "55",
+        "conjugations": {
+            "BV": [
+                "lose"
+            ],
+            "V-ED": [
+                "lost"
+            ],
+            "V-EN": [
+                "lost"
+            ],
+            "translation": [
+                "perdre"
+            ]
+        }
+    },
+    "make": {
+        "index": "56",
+        "conjugations": {
+            "BV": [
+                "make"
+            ],
+            "V-ED": [
+                "made"
+            ],
+            "V-EN": [
+                "made"
+            ],
+            "translation": [
+                "faire",
+                "fabriquer"
+            ]
+        }
+    },
+    "mean": {
+        "index": "57",
+        "conjugations": {
+            "BV": [
+                "mean"
+            ],
+            "V-ED": [
+                "meant"
+            ],
+            "V-EN": [
+                "meant"
+            ],
+            "translation": [
+                "signifier"
+            ]
+        }
+    },
+    "meet": {
+        "index": "58",
+        "conjugations": {
+            "BV": [
+                "meet"
+            ],
+            "V-ED": [
+                "met"
+            ],
+            "V-EN": [
+                "met"
+            ],
+            "translation": [
+                "(se) rencontrer"
+            ]
+        }
+    },
+    "pay": {
+        "index": "59",
+        "conjugations": {
+            "BV": [
+                "pay"
+            ],
+            "V-ED": [
+                "paid"
+            ],
+            "V-EN": [
+                "paid"
+            ],
+            "translation": [
+                "payer"
+            ]
+        }
+    },
+    "put": {
+        "index": "60",
+        "conjugations": {
+            "BV": [
+                "put"
+            ],
+            "V-ED": [
+                "put"
+            ],
+            "V-EN": [
+                "put"
+            ],
+            "translation": [
+                "mettre"
+            ]
+        }
+    },
+    "read": {
+        "index": "61",
+        "conjugations": {
+            "BV": [
+                "read"
+            ],
+            "V-ED": [
+                "read"
+            ],
+            "V-EN": [
+                "read"
+            ],
+            "translation": [
+                "lire"
+            ]
+        }
+    },
+    "rent": {
+        "index": "62",
+        "conjugations": {
+            "BV": [
+                "rent"
+            ],
+            "V-ED": [
+                "rent"
+            ],
+            "V-EN": [
+                "rent"
+            ],
+            "translation": [
+                "louer"
+            ]
+        }
+    },
+    "ride": {
+        "index": "63",
+        "conjugations": {
+            "BV": [
+                "ride"
+            ],
+            "V-ED": [
+                "rode"
+            ],
+            "V-EN": [
+                "ridden"
+            ],
+            "translation": [
+                "chevaucher"
+            ]
+        }
+    },
+    "ring": {
+        "index": "64",
+        "conjugations": {
+            "BV": [
+                "ring"
+            ],
+            "V-ED": [
+                "rang"
+            ],
+            "V-EN": [
+                "rung"
+            ],
+            "translation": [
+                "sonner"
+            ]
+        }
+    },
+    "rise": {
+        "index": "65",
+        "conjugations": {
+            "BV": [
+                "rise"
+            ],
+            "V-ED": [
+                "rose"
+            ],
+            "V-EN": [
+                "risen"
+            ],
+            "translation": [
+                "s'élever",
+                "se lever"
+            ]
+        }
+    },
+    "run": {
+        "index": "66",
+        "conjugations": {
+            "BV": [
+                "run"
+            ],
+            "V-ED": [
+                "ran"
+            ],
+            "V-EN": [
+                "run"
+            ],
+            "translation": [
+                "courir"
+            ]
+        }
+    },
+    "say": {
+        "index": "67",
+        "conjugations": {
+            "BV": [
+                "say"
+            ],
+            "V-ED": [
+                "said"
+            ],
+            "V-EN": [
+                "said"
+            ],
+            "translation": [
+                "dire"
+            ]
+        }
+    },
+    "see": {
+        "index": "68",
+        "conjugations": {
+            "BV": [
+                "see"
+            ],
+            "V-ED": [
+                "saw"
+            ],
+            "V-EN": [
+                "seen"
+            ],
+            "translation": [
+                "voir"
+            ]
+        }
+    },
+    "sell": {
+        "index": "69",
+        "conjugations": {
+            "BV": [
+                "sell"
+            ],
+            "V-ED": [
+                "sold"
+            ],
+            "V-EN": [
+                "sold"
+            ],
+            "translation": [
+                "vendre"
+            ]
+        }
+    },
+    "send": {
+        "index": "70",
+        "conjugations": {
+            "BV": [
+                "send"
+            ],
+            "V-ED": [
+                "sent"
+            ],
+            "V-EN": [
+                "sent"
+            ],
+            "translation": [
+                "envoyer"
+            ]
+        }
+    },
+    "set": {
+        "index": "71",
+        "conjugations": {
+            "BV": [
+                "set"
+            ],
+            "V-ED": [
+                "set"
+            ],
+            "V-EN": [
+                "set"
+            ],
+            "translation": [
+                "fixer"
+            ]
+        }
+    },
+    "shake": {
+        "index": "72",
+        "conjugations": {
+            "BV": [
+                "shake"
+            ],
+            "V-ED": [
+                "shook"
+            ],
+            "V-EN": [
+                "shaken"
+            ],
+            "translation": [
+                "secouer"
+            ]
+        }
+    },
+    "shine": {
+        "index": "73",
+        "conjugations": {
+            "BV": [
+                "shine"
+            ],
+            "V-ED": [
+                "shone"
+            ],
+            "V-EN": [
+                "shone"
+            ],
+            "translation": [
+                "briller"
+            ]
+        }
+    },
+    "shoot": {
+        "index": "74",
+        "conjugations": {
+            "BV": [
+                "shoot"
+            ],
+            "V-ED": [
+                "shot"
+            ],
+            "V-EN": [
+                "shot"
+            ],
+            "translation": [
+                "tirer"
+            ]
+        }
+    },
+    "show": {
+        "index": "75",
+        "conjugations": {
+            "BV": [
+                "show"
+            ],
+            "V-ED": [
+                "showed"
+            ],
+            "V-EN": [
+                "shown"
+            ],
+            "translation": [
+                "montrer"
+            ]
+        }
+    },
+    "shut": {
+        "index": "76",
+        "conjugations": {
+            "BV": [
+                "shut"
+            ],
+            "V-ED": [
+                "shut"
+            ],
+            "V-EN": [
+                "shut"
+            ],
+            "translation": [
+                "fermer"
+            ]
+        }
+    },
+    "sing": {
+        "index": "77",
+        "conjugations": {
+            "BV": [
+                "sing"
+            ],
+            "V-ED": [
+                "sang"
+            ],
+            "V-EN": [
+                "sung"
+            ],
+            "translation": [
+                "chanter"
+            ]
+        }
+    },
+    "sit": {
+        "index": "78",
+        "conjugations": {
+            "BV": [
+                "sit"
+            ],
+            "V-ED": [
+                "sat"
+            ],
+            "V-EN": [
+                "sat"
+            ],
+            "translation": [
+                "être assis"
+            ]
+        }
+    },
+    "sleep": {
+        "index": "79",
+        "conjugations": {
+            "BV": [
+                "sleep"
+            ],
+            "V-ED": [
+                "slept"
+            ],
+            "V-EN": [
+                "slept"
+            ],
+            "translation": [
+                "dormir"
+            ]
+        }
+    },
+    "smell": {
+        "index": "80",
+        "conjugations": {
+            "BV": [
+                "smell"
+            ],
+            "V-ED": [
+                "smelt"
+            ],
+            "V-EN": [
+                "smelt"
+            ],
+            "translation": [
+                "sentir (odorat)"
+            ]
+        }
+    },
+    "speak": {
+        "index": "81",
+        "conjugations": {
+            "BV": [
+                "speak"
+            ],
+            "V-ED": [
+                "spoke"
+            ],
+            "V-EN": [
+                "spoken"
+            ],
+            "translation": [
+                "parler"
+            ]
+        }
+    },
+    "spend": {
+        "index": "82",
+        "conjugations": {
+            "BV": [
+                "spend"
+            ],
+            "V-ED": [
+                "spent"
+            ],
+            "V-EN": [
+                "spent"
+            ],
+            "translation": [
+                "dépenser"
+            ]
+        }
+    },
+    "spread": {
+        "index": "83",
+        "conjugations": {
+            "BV": [
+                "spread"
+            ],
+            "V-ED": [
+                "spread"
+            ],
+            "V-EN": [
+                "spread"
+            ],
+            "translation": [
+                "répandre"
+            ]
+        }
+    },
+    "stand": {
+        "index": "84",
+        "conjugations": {
+            "BV": [
+                "stand"
+            ],
+            "V-ED": [
+                "stood"
+            ],
+            "V-EN": [
+                "stood"
+            ],
+            "translation": [
+                "être debout"
+            ]
+        }
+    },
+    "steal": {
+        "index": "85",
+        "conjugations": {
+            "BV": [
+                "steal"
+            ],
+            "V-ED": [
+                "stole"
+            ],
+            "V-EN": [
+                "stolen"
+            ],
+            "translation": [
+                "voler",
+                "dérober"
+            ]
+        }
+    },
+    "strike": {
+        "index": "86",
+        "conjugations": {
+            "BV": [
+                "strike"
+            ],
+            "V-ED": [
+                "struck"
+            ],
+            "V-EN": [
+                "struck"
+            ],
+            "translation": [
+                "frapper"
+            ]
+        }
+    },
+    "swear": {
+        "index": "87",
+        "conjugations": {
+            "BV": [
+                "swear"
+            ],
+            "V-ED": [
+                "swore"
+            ],
+            "V-EN": [
+                "sworn"
+            ],
+            "translation": [
+                "jurer"
+            ]
+        }
+    },
+    "swim": {
+        "index": "88",
+        "conjugations": {
+            "BV": [
+                "swim"
+            ],
+            "V-ED": [
+                "swam"
+            ],
+            "V-EN": [
+                "swum"
+            ],
+            "translation": [
+                "nager"
+            ]
+        }
+    },
+    "take": {
+        "index": "89",
+        "conjugations": {
+            "BV": [
+                "take"
+            ],
+            "V-ED": [
+                "took"
+            ],
+            "V-EN": [
+                "taken"
+            ],
+            "translation": [
+                "prendre"
+            ]
+        }
+    },
+    "teach": {
+        "index": "90",
+        "conjugations": {
+            "BV": [
+                "teach"
+            ],
+            "V-ED": [
+                "taught"
+            ],
+            "V-EN": [
+                "taught"
+            ],
+            "translation": [
+                "enseigner"
+            ]
+        }
+    },
+    "tear": {
+        "index": "91",
+        "conjugations": {
+            "BV": [
+                "tear"
+            ],
+            "V-ED": [
+                "tore"
+            ],
+            "V-EN": [
+                "torn"
+            ],
+            "translation": [
+                "déchirer"
+            ]
+        }
+    },
+    "tell": {
+        "index": "92",
+        "conjugations": {
+            "BV": [
+                "tell"
+            ],
+            "V-ED": [
+                "told"
+            ],
+            "V-EN": [
+                "told"
+            ],
+            "translation": [
+                "dire",
+                "raconter"
+            ]
+        }
+    },
+    "think": {
+        "index": "93",
+        "conjugations": {
+            "BV": [
+                "think"
+            ],
+            "V-ED": [
+                "thought"
+            ],
+            "V-EN": [
+                "thought"
+            ],
+            "translation": [
+                "penser"
+            ]
+        }
+    },
+    "throw": {
+        "index": "94",
+        "conjugations": {
+            "BV": [
+                "throw"
+            ],
+            "V-ED": [
+                "threw"
+            ],
+            "V-EN": [
+                "thrown"
+            ],
+            "translation": [
+                "jeter"
+            ]
+        }
+    },
+    "understand": {
+        "index": "95",
+        "conjugations": {
+            "BV": [
+                "understand"
+            ],
+            "V-ED": [
+                "understood"
+            ],
+            "V-EN": [
+                "understood"
+            ],
+            "translation": [
+                "comprendre"
+            ]
+        }
+    },
+    "upset": {
+        "index": "96",
+        "conjugations": {
+            "BV": [
+                "upset"
+            ],
+            "V-ED": [
+                "upset"
+            ],
+            "V-EN": [
+                "upset"
+            ],
+            "translation": [
+                "bouleverser"
+            ]
+        }
+    },
+    "wake": {
+        "index": "97",
+        "conjugations": {
+            "BV": [
+                "wake"
+            ],
+            "V-ED": [
+                "woke"
+            ],
+            "V-EN": [
+                "woken"
+            ],
+            "translation": [
+                "(se) réveiller"
+            ]
+        }
+    },
+    "wear": {
+        "index": "98",
+        "conjugations": {
+            "BV": [
+                "wear"
+            ],
+            "V-ED": [
+                "wore"
+            ],
+            "V-EN": [
+                "worn"
+            ],
+            "translation": [
+                "porter (des vêtements)"
+            ]
+        }
+    },
+    "win": {
+        "index": "99",
+        "conjugations": {
+            "BV": [
+                "win"
+            ],
+            "V-ED": [
+                "won"
+            ],
+            "V-EN": [
+                "won"
+            ],
+            "translation": [
+                "gagner"
+            ]
+        }
+    },
+    "write": {
+        "index": "100",
+        "conjugations": {
+            "BV": [
+                "write"
+            ],
+            "V-ED": [
+                "wrote"
+            ],
+            "V-EN": [
+                "written"
+            ],
+            "translation": [
+                "écrire"
+            ]
+        }
+    }
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f6f1">
+    <meta name="description" content="Révisez les verbes irréguliers anglais à votre rythme avec Verbify.">
+    <title>Verbify — Quiz de verbes irréguliers</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="./" aria-label="Verbify, accueil">
+            <span class="brand-mark" aria-hidden="true">
+                <svg viewBox="0 0 32 32" fill="none">
+                    <path d="M7 8.5 13.2 23h3.1l6.3-14.5h-4.1l-3.7 9.2-3.7-9.2H7Z" fill="currentColor"/>
+                    <circle cx="24.5" cy="22.5" r="3.5" fill="#c6f36b"/>
+                </svg>
+            </span>
+            <span>verbify<span class="brand-period">.</span></span>
+        </a>
+    </header>
+
+    <main class="main-content">
+
+        <section class="quiz-panel setup-panel" id="setup-view" aria-labelledby="setup-title">
+            <div class="panel-topline">
+                <span class="step-badge">01</span>
+                <span class="panel-kicker">PRÉPARATION</span>
+                <span class="verb-total"><strong id="verb-total">—</strong> verbes disponibles</span>
+            </div>
+            <h2 id="setup-title">Choisis tes verbes</h2>
+            <p class="panel-description">Sélectionne le premier et le dernier verbe. Tous ceux entre les deux seront inclus, dans l'ordre de la liste.</p>
+
+            <form id="range-form" class="range-form">
+                <div class="range-fields">
+                    <label class="field-group" for="start-verb">
+                        <span class="field-label">PREMIER VERBE</span>
+                        <span class="select-wrap">
+                            <select id="start-verb" name="start" required disabled>
+                                <option value="">Chargement…</option>
+                            </select>
+                            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 7 5 5 5-5"/></svg>
+                        </span>
+                    </label>
+                    <span class="range-connector" aria-hidden="true">→</span>
+                    <label class="field-group" for="end-verb">
+                        <span class="field-label">DERNIER VERBE</span>
+                        <span class="select-wrap">
+                            <select id="end-verb" name="end" required disabled>
+                                <option value="">Chargement…</option>
+                            </select>
+                            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 7 5 5 5-5"/></svg>
+                        </span>
+                    </label>
+                </div>
+                <p class="range-summary" id="range-summary" aria-live="polite">Chargement de la liste des verbes…</p>
+                <p class="form-error" id="setup-error" role="alert" hidden></p>
+                <button class="primary-button start-button" id="start-button" type="submit" disabled>
+                    Commencer le quiz <span aria-hidden="true">→</span>
+                </button>
+            </form>
+
+            <div class="how-it-works">
+                <span class="how-icon" aria-hidden="true">✳</span>
+                <p><strong>Comment ça marche ?</strong><br>Pour chaque verbe, écris la base verbale, le prétérit et le participe passé. Un verbe compte comme maîtrisé si les trois réponses sont justes.</p>
+            </div>
+        </section>
+
+        <section class="quiz-panel question-panel" id="question-view" aria-labelledby="question-title" hidden>
+            <div class="question-topline">
+                <button class="back-button" id="back-to-setup" type="button">
+                    <span aria-hidden="true">←</span> Changer la sélection
+                </button>
+                <span class="question-counter" id="question-counter">Verbe 1 / 1</span>
+            </div>
+            <div class="progress-track" id="quiz-progress-track" role="progressbar" aria-label="Progression du quiz" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                <span class="progress-fill" id="quiz-progress"></span>
+            </div>
+            <p class="question-kicker">CONNAIT TU CE VERBE ?</p>
+            <h2 class="translation-prompt" id="question-title">être</h2>
+            <p class="question-hint">Écris les formes demandées du verbe.</p>
+
+            <form id="answer-form" class="answer-form" novalidate>
+                <div class="answer-fields">
+                    <label class="field-group" for="answer-bv">
+                        <span class="field-label">BASE VERBALE <span class="field-example">exemple : go</span></span>
+                        <input id="answer-bv" name="BV" type="text" placeholder="Ta réponse" autocomplete="off" autocapitalize="none" spellcheck="false" required>
+                        <span class="answer-status" aria-live="polite"></span>
+                    </label>
+                    <label class="field-group" for="answer-past">
+                        <span class="field-label">PRÉTÉRIT <span class="field-example">exemple : went</span></span>
+                        <input id="answer-past" name="V-ED" type="text" placeholder="Ta réponse" autocomplete="off" autocapitalize="none" spellcheck="false" required>
+                        <span class="answer-status" aria-live="polite"></span>
+                    </label>
+                    <label class="field-group" for="answer-participle">
+                        <span class="field-label">PARTICIPE PASSÉ <span class="field-example">exemple : gone</span></span>
+                        <input id="answer-participle" name="V-EN" type="text" placeholder="Ta réponse" autocomplete="off" autocapitalize="none" spellcheck="false" required>
+                        <span class="answer-status" aria-live="polite"></span>
+                    </label>
+                </div>
+                <p class="form-error" id="answer-error" role="alert" hidden></p>
+                <div class="feedback-box" id="answer-feedback" role="status" aria-live="polite" hidden>
+                    <strong id="feedback-title"></strong>
+                    <p id="feedback-copy"></p>
+                </div>
+                <button class="primary-button answer-button" id="check-answer" type="submit">
+                    Vérifier mes réponses <span aria-hidden="true">→</span>
+                </button>
+                <button class="skip-button" id="skip-question" type="button">
+                    Passer ce verbe <span aria-hidden="true">↷</span>
+                </button>
+                <button class="primary-button answer-button" id="next-question" type="button" hidden>
+                    Verbe suivant <span aria-hidden="true">→</span>
+                </button>
+            </form>
+        </section>
+
+        <section class="quiz-panel results-panel" id="results-view" aria-labelledby="results-title" hidden>
+            <div class="results-heading">
+                <span class="step-badge results-badge">03</span>
+                <p class="panel-kicker">QUIZ TERMINÉ</p>
+            </div>
+            <h2 id="results-title">Bravo d'être allé·e jusqu'au bout !</h2>
+            <p class="panel-description">Voici le résultat de ta session. Tu peux refaire le quiz autant de fois que tu veux.</p>
+            <div class="score-card">
+                <div class="score-ring" id="score-ring" role="img" aria-label="Score de 0 %">
+                    <div class="score-ring-center"><strong id="score-percentage">0%</strong><span>de réussite</span></div>
+                </div>
+                <div class="score-copy">
+                    <p class="score-count"><strong id="mastered-count">0</strong><span> / <span id="reviewed-count">0</span></span></p>
+                    <p class="score-label">verbes maîtrisés</p>
+                    <p class="score-message" id="score-message"></p>
+                </div>
+            </div>
+            <div class="results-details">
+                <div class="results-details-heading">
+                    <h3>Récapitulatif</h3>
+                    <span id="results-range"></span>
+                </div>
+                <ol class="results-list" id="results-list"></ol>
+            </div>
+            <button class="primary-button retry-button" id="retry-quiz" type="button">
+                Choisir une nouvelle plage <span aria-hidden="true">↗</span>
+            </button>
+        </section>
+
+        <p class="load-error" id="load-error" role="alert" hidden>Impossible de charger la liste des verbes. Lance le site avec un serveur local ou réessaie.</p>
+
+        <footer class="page-footer">
+            <span>Ce site est open source. <a href="https://github.com/LoTek2012/Verbify" target="_blank" rel="noopener noreferrer">Voir le code sur GitHub</a></span>
+            <span><a href="https://github.com/LoTek2012" target="_blank" rel="noopener noreferrer">By Loan</a></span>
+        </footer>
+    </main>
+</body>
+</html>
