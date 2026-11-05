@@ -58,6 +58,31 @@
                     </label>
                 </div>
                 <p class="range-summary" id="range-summary" aria-live="polite">Chargement de la liste des verbes…</p>
+                <div class="quiz-settings">
+                    <label class="field-group" for="known-mode">
+                        <span class="field-label">FORME CONNUE</span>
+                        <span class="select-wrap">
+                            <select id="known-mode" name="known-mode">
+                                <option value="fixed">Toujours la même</option>
+                                <option value="random">Aléatoire à chaque verbe</option>
+                            </select>
+                            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 7 5 5 5-5"/></svg>
+                        </span>
+                    </label>
+                    <label class="field-group" id="known-form-group" for="known-form">
+                        <span class="field-label">TOUJOURS</span>
+                        <span class="select-wrap">
+                            <select id="known-form" name="known-form">
+                                <option value="translation">Traduction française</option>
+                                <option value="BV">Base verbale</option>
+                                <option value="V-ED">Prétérit</option>
+                                <option value="V-EN">Participe passé</option>
+                            </select>
+                            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 7 5 5 5-5"/></svg>
+                        </span>
+                    </label>
+                </div>
+                <p class="settings-hint" id="known-mode-description">La forme choisie sera affichée pour chaque verbe ; tu complèteras les autres.</p>
                 <p class="form-error" id="setup-error" role="alert" hidden></p>
                 <button class="primary-button start-button" id="start-button" type="submit" disabled>
                     Commencer le quiz <span aria-hidden="true">→</span>
@@ -66,7 +91,7 @@
 
             <div class="how-it-works">
                 <span class="how-icon" aria-hidden="true">✳</span>
-                <p><strong>Comment ça marche ?</strong><br>Pour chaque verbe, écris la base verbale, le prétérit et le participe passé. Un verbe compte comme maîtrisé si les trois réponses sont justes.</p>
+                <p><strong>Comment ça marche ?</strong><br>La forme affichée est ton indice. Écris les autres formes demandées ; le verbe est maîtrisé si toutes tes réponses sont justes.</p>
             </div>
         </section>
 
@@ -80,26 +105,31 @@
             <div class="progress-track" id="quiz-progress-track" role="progressbar" aria-label="Progression du quiz" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
                 <span class="progress-fill" id="quiz-progress"></span>
             </div>
-            <p class="question-kicker">CONNAIT TU CE VERBE ?</p>
+            <p class="question-kicker" id="question-kicker">FORME CONNUE · TRADUCTION FRANÇAISE</p>
             <h2 class="translation-prompt" id="question-title">être</h2>
             <p class="question-hint">Écris les formes demandées du verbe.</p>
 
             <form id="answer-form" class="answer-form" novalidate>
                 <div class="answer-fields">
-                    <label class="field-group" for="answer-bv">
+                    <label class="field-group" id="field-group-BV" for="answer-bv">
                         <span class="field-label">BASE VERBALE <span class="field-example">exemple : go</span></span>
                         <input id="answer-bv" name="BV" type="text" placeholder="Ta réponse" autocomplete="off" autocapitalize="none" spellcheck="false" required>
                         <span class="answer-status" id="status-bv" aria-live="polite"></span>
                     </label>
-                    <label class="field-group" for="answer-past">
+                    <label class="field-group" id="field-group-V-ED" for="answer-past">
                         <span class="field-label">PRÉTÉRIT <span class="field-example">exemple : went</span></span>
                         <input id="answer-past" name="V-ED" type="text" placeholder="Ta réponse" autocomplete="off" autocapitalize="none" spellcheck="false" required>
                         <span class="answer-status" id="status-past" aria-live="polite"></span>
                     </label>
-                    <label class="field-group" for="answer-participle">
+                    <label class="field-group" id="field-group-V-EN" for="answer-participle">
                         <span class="field-label">PARTICIPE PASSÉ <span class="field-example">exemple : gone</span></span>
                         <input id="answer-participle" name="V-EN" type="text" placeholder="Ta réponse" autocomplete="off" autocapitalize="none" spellcheck="false" required>
                         <span class="answer-status" id="status-participle" aria-live="polite"></span>
+                    </label>
+                    <label class="field-group" id="field-group-translation" for="answer-translation">
+                        <span class="field-label">TRADUCTION FRANÇAISE <span class="field-example">exemple : aller</span></span>
+                        <input id="answer-translation" name="translation" type="text" placeholder="Ta réponse" autocomplete="off" autocapitalize="none" spellcheck="false" required>
+                        <span class="answer-status" id="status-translation" aria-live="polite"></span>
                     </label>
                 </div>
                 <p class="form-error" id="answer-error" role="alert" hidden></p>

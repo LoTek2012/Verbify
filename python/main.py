@@ -1,18 +1,31 @@
 import json
+import random
 
 from browser import ajax, console, document, html
 
+
+KNOWN_FORMS = ("translation", "BV", "V-ED", "V-EN")
+KNOWN_FORM_LABELS = {
+    "translation": "traduction française",
+    "BV": "base verbale",
+    "V-ED": "prétérit",
+    "V-EN": "participe passé",
+}
 
 verbs = []
 selected_verbs = []
 answers = []
 current_index = 0
 has_checked_answer = False
+known_mode = "fixed"
+fixed_known_form = "translation"
+current_known_form = "translation"
 
 answer_fields = [
     ("BV", "answer-bv", "status-bv"),
     ("V-ED", "answer-past", "status-past"),
     ("V-EN", "answer-participle", "status-participle"),
+    ("translation", "answer-translation", "status-translation"),
 ]
 
 
@@ -81,8 +94,11 @@ def update_progress():
 def reset_answer_form():
     global has_checked_answer
 
-    for _, input_id, status_id in answer_fields:
+    for key, input_id, status_id in answer_fields:
         answer_input = document[input_id]
+        is_known = key == current_known_form
+        document["field-group-{}".format(key)].hidden = is_known
+        answer_input.required = not is_known
         answer_input.value = ""
         answer_input.disabled = False
         answer_input.removeAttribute("aria-invalid")
@@ -101,12 +117,24 @@ def reset_answer_form():
 
 
 def show_question():
+    global current_known_form
+
     if current_index >= len(selected_verbs):
         show_results()
         return
 
     verb = selected_verbs[current_index]
-    document["question-title"].text = get_translations(verb)
+    if known_mode == "random":
+        current_known_form = random.choice(KNOWN_FORMS)
+    else:
+        current_known_form = fixed_known_form
+
+    document["question-kicker"].text = "FORME CONNUE · {}".format(
+        KNOWN_FORM_LABELS[current_known_form].upper()
+    )
+    document["question-title"].text = format_answers(
+        verb["conjugations"][current_known_form]
+    )
     reset_answer_form()
     update_progress()
     show_view("question-view")
@@ -174,13 +202,13 @@ def show_results():
     if percentage == 100:
         message = "Parfait, tu maîtrises toute cette série !"
     elif percentage >= 70:
-        message = "Très bon travail, mais pas parfait !"
+        message = "Très bon travail, encore un petit effort !"
     elif percentage >= 40:
-        message = "Tu progresses. !"
+        message = "Tu progresses. Une nouvelle révision t'aidera !"
     elif percentage > 0:
-        message = "Tu ne connais presque rien !"
+        message = "Chaque réponse juste est un progrès. Continue à t'entraîner !"
     else:
-        message = "Tu est nul !"
+        message = "Tu n'as pas encore maîtrisé de verbe dans cette série. Tu peux réessayer !"
     document["score-message"].text = message
 
     results_list = document["results-list"]
@@ -193,7 +221,7 @@ def show_results():
 
 
 def start_quiz(event):
-    global selected_verbs, answers, current_index
+    global selected_verbs, answers, current_index, known_mode, fixed_known_form
 
     event.preventDefault()
     first = int(document["start-verb"].value)
@@ -216,6 +244,8 @@ def start_quiz(event):
 
     answers = []
     current_index = 0
+    known_mode = document["known-mode"].value
+    fixed_known_form = document["known-form"].value
     setup_error.hidden = True
     show_question()
 
@@ -228,13 +258,17 @@ def check_answer(event):
         return
 
     missing_field = None
-    for key, input_id, _ in answer_fields:
+    required_fields = [
+        field for field in answer_fields
+        if field[0] != current_known_form
+    ]
+    for key, input_id, _ in required_fields:
         if not document[input_id].value.strip():
             missing_field = input_id
             break
 
     if missing_field:
-        document["answer-error"].text = "Complète les trois formes avant de vérifier."
+        document["answer-error"].text = "Complète les trois réponses avant de vérifier."
         document["answer-error"].hidden = False
         document[missing_field].focus()
         return
@@ -243,7 +277,7 @@ def check_answer(event):
     verb = selected_verbs[current_index]
     correct_count = 0
 
-    for key, input_id, status_id in answer_fields:
+    for key, input_id, status_id in required_fields:
         answer_input = document[input_id]
         is_correct = normalize_answer(answer_input.value) in accepted_answers(
             verb["conjugations"][key]
@@ -262,7 +296,7 @@ def check_answer(event):
                 format_answers(verb["conjugations"][key])
             )
 
-    mastered = correct_count == len(answer_fields)
+    mastered = correct_count == len(required_fields)
     answers.append({
         "verb": verb,
         "mastered": mastered,
@@ -322,6 +356,22 @@ def return_to_setup(event):
     event.preventDefault()
     show_view("setup-view")
     document["start-verb"].focus()
+
+
+def update_known_mode(*_args):
+    is_random = document["known-mode"].value == "random"
+    known_form_group = document["known-form-group"]
+    known_form_group.hidden = is_random
+    document["known-form"].disabled = is_random
+    if is_random:
+        document["known-mode-description"].text = (
+            "Une forme différente est tirée au hasard pour chaque verbe ; "
+            "tu complèteras les autres."
+        )
+    else:
+        document["known-mode-description"].text = (
+            "La forme choisie sera affichée pour chaque verbe ; tu complèteras les autres."
+        )
 
 
 def on_verbs_loaded(request):
@@ -389,6 +439,7 @@ def show_load_error(message):
 
 document["start-verb"].bind("change", update_range_summary)
 document["end-verb"].bind("change", update_range_summary)
+document["known-mode"].bind("change", update_known_mode)
 document["range-form"].bind("submit", start_quiz)
 document["answer-form"].bind("submit", check_answer)
 document["skip-question"].bind("click", skip_question)
