@@ -7,9 +7,11 @@
     <meta name="description" content="Révisez les verbes irréguliers anglais à votre rythme avec Verbify.">
     <title>Verbify — Quiz de verbes irréguliers</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/brython@3.15.0/brython.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/brython@3.15.0/brython_stdlib.js"></script>
+    <script type="text/python" src="python/main.py"></script>
 </head>
-<body>
+<body onload="brython()">
     <header class="site-header">
         <a class="brand" href="./" aria-label="Verbify, accueil">
             <span class="brand-mark" aria-hidden="true">
@@ -87,17 +89,17 @@
                     <label class="field-group" for="answer-bv">
                         <span class="field-label">BASE VERBALE <span class="field-example">exemple : go</span></span>
                         <input id="answer-bv" name="BV" type="text" placeholder="Ta réponse" autocomplete="off" autocapitalize="none" spellcheck="false" required>
-                        <span class="answer-status" aria-live="polite"></span>
+                        <span class="answer-status" id="status-bv" aria-live="polite"></span>
                     </label>
                     <label class="field-group" for="answer-past">
                         <span class="field-label">PRÉTÉRIT <span class="field-example">exemple : went</span></span>
                         <input id="answer-past" name="V-ED" type="text" placeholder="Ta réponse" autocomplete="off" autocapitalize="none" spellcheck="false" required>
-                        <span class="answer-status" aria-live="polite"></span>
+                        <span class="answer-status" id="status-past" aria-live="polite"></span>
                     </label>
                     <label class="field-group" for="answer-participle">
                         <span class="field-label">PARTICIPE PASSÉ <span class="field-example">exemple : gone</span></span>
                         <input id="answer-participle" name="V-EN" type="text" placeholder="Ta réponse" autocomplete="off" autocapitalize="none" spellcheck="false" required>
-                        <span class="answer-status" aria-live="polite"></span>
+                        <span class="answer-status" id="status-participle" aria-live="polite"></span>
                     </label>
                 </div>
                 <p class="form-error" id="answer-error" role="alert" hidden></p>
@@ -123,7 +125,7 @@
                 <p class="panel-kicker">QUIZ TERMINÉ</p>
             </div>
             <h2 id="results-title">Bravo d'être allé·e jusqu'au bout !</h2>
-            <p class="panel-description">Voici le résultat de ta session. Tu peux refaire le quiz autant de fois que tu veux.</p>
+            <p class="panel-description">Voici ton résultat. Tu peux refaire le quiz autant de fois que tu veux.</p>
             <div class="score-card">
                 <div class="score-ring" id="score-ring" role="img" aria-label="Score de 0 %">
                     <div class="score-ring-center"><strong id="score-percentage">0%</strong><span>de réussite</span></div>
