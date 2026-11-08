@@ -31,8 +31,44 @@ answer_fields = [
 
 
 def show_view(view_id):
-    for candidate in ("setup-view", "question-view", "results-view"):
+    for candidate in ("setup-view", "verb-list-view", "question-view", "results-view"):
         document[candidate].hidden = candidate != view_id
+
+
+def build_verb_list_item(verb):
+    conjugations = verb["conjugations"]
+    forms = " · ".join((
+        "BV : {}".format(format_answers(conjugations["BV"])),
+        "Prétérit : {}".format(format_answers(conjugations["V-ED"])),
+        "Participe passé : {}".format(format_answers(conjugations["V-EN"])),
+        "Traduction : {}".format(get_translations(verb)),
+    ))
+
+    number = html.SPAN(Class="verb-list-number")
+    number.text = str(verb["index"])
+    name = html.STRONG()
+    name.text = verb["name"]
+    details = html.SPAN(Class="verb-list-details")
+    details.text = forms
+    content = html.SPAN(Class="verb-list-content")
+    content <= name
+    content <= details
+    item = html.LI(Class="verb-list-item")
+    item <= number
+    item <= content
+    return item
+
+
+def show_verb_list(event):
+    event.preventDefault()
+    show_view("verb-list-view")
+    document["back-to-setup-from-list"].focus()
+
+
+def return_to_setup_from_list(event):
+    event.preventDefault()
+    show_view("setup-view")
+    document["show-verb-list"].focus()
 
 
 def normalize_answer(value):
@@ -439,6 +475,12 @@ def on_verbs_loaded(request):
         document["end-verb"].disabled = False
         document["verb-total"].text = str(len(verbs))
         document["start-button"].disabled = False
+        document["show-verb-list"].disabled = False
+        document["verb-list-count"].text = "{} verbes".format(len(verbs))
+        verb_list = document["verb-list"]
+        verb_list.clear()
+        for verb in verbs:
+            verb_list <= build_verb_list_item(verb)
         update_range_summary()
     except (ValueError, KeyError, TypeError, json.JSONDecodeError) as error:
         console.error(error)
@@ -460,6 +502,8 @@ document["answer-form"].bind("submit", check_answer)
 document["skip-question"].bind("click", skip_question)
 document["next-question"].bind("click", next_question)
 document["back-to-setup"].bind("click", return_to_setup)
+document["show-verb-list"].bind("click", show_verb_list)
+document["back-to-setup-from-list"].bind("click", return_to_setup_from_list)
 document["retry-quiz"].bind("click", return_to_setup)
 document["theme-toggle"].bind("click", toggle_theme)
 

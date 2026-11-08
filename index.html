@@ -91,12 +91,27 @@
                 <button class="primary-button start-button" id="start-button" type="submit" disabled>
                     Commencer le quiz <span aria-hidden="true">→</span>
                 </button>
+                <button class="skip-button list-button" id="show-verb-list" type="button" disabled>
+                    Voir toute la liste <span aria-hidden="true">↓</span>
+                </button>
             </form>
 
             <div class="how-it-works">
                 <span class="how-icon" aria-hidden="true">✳</span>
                 <p><strong>Comment ça marche ?</strong><br>Tu connais la forme affichée. Écris les autres formes demandées, le verbe est maîtrisé si toutes tes réponses sont justes.</p>
             </div>
+        </section>
+
+        <section class="quiz-panel verb-list-panel" id="verb-list-view" aria-labelledby="verb-list-title" hidden>
+            <div class="question-topline">
+                <button class="back-button" id="back-to-setup-from-list" type="button">
+                    <span aria-hidden="true">←</span> Retour à l’accueil
+                </button>
+                <span class="question-counter" id="verb-list-count"></span>
+            </div>
+            <h2 id="verb-list-title">Liste des verbes</h2>
+            <p class="panel-description">Retrouve ici toutes les formes et leur traduction.</p>
+            <ol class="verb-list" id="verb-list"></ol>
         </section>
 
         <section class="quiz-panel question-panel" id="question-view" aria-labelledby="question-title" hidden>
