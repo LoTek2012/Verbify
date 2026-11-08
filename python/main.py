@@ -11,6 +11,7 @@ KNOWN_FORM_LABELS = {
     "V-ED": "prétérit",
     "V-EN": "participe passé",
 }
+JSON_PATH = "data/verbs_list.json"
 
 verbs = []
 selected_verbs = []
@@ -129,9 +130,7 @@ def show_question():
     else:
         current_known_form = fixed_known_form
 
-    document["question-kicker"].text = "FORME CONNUE · {}".format(
-        KNOWN_FORM_LABELS[current_known_form].upper()
-    )
+    document["question-kicker"].text = f"{KNOWN_FORM_LABELS[current_known_form].upper()}"
     document["question-title"].text = format_answers(
         verb["conjugations"][current_known_form]
     )
@@ -202,15 +201,15 @@ def show_results():
     )
 
     if percentage == 100:
-        message = "Parfait, tu maîtrises toute cette série !"
+        message = "C'est parfait !"
     elif percentage >= 70:
-        message = "Très bon travail, encore un petit effort !"
+        message = "Très bon travail, mais pas parfait !"
     elif percentage >= 40:
-        message = "Tu progresses. Une nouvelle révision t'aidera !"
-    elif percentage > 0:
-        message = "Chaque réponse juste est un progrès. Continue à t'entraîner !"
+        message = "Tu progresses."
+    elif percentage < 40 and not percentage == 0:
+        message = "Tu ne connait presque rien !"
     else:
-        message = "Tu n'as pas encore maîtrisé de verbe dans cette série. Tu peux réessayer !"
+        message = "Tu est vraiment nul !"
     document["score-message"].text = message
 
     results_list = document["results-list"]
@@ -464,4 +463,4 @@ document["back-to-setup"].bind("click", return_to_setup)
 document["retry-quiz"].bind("click", return_to_setup)
 document["theme-toggle"].bind("click", toggle_theme)
 
-ajax.get("data/verbs_list.json", mode="json", oncomplete=on_verbs_loaded)
+ajax.get(JSON_PATH, mode="json", oncomplete=on_verbs_loaded)
